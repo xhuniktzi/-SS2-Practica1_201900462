@@ -39,6 +39,10 @@ WHERE Passenger_ID IN (
     WHERE rn > 1
 );
 
+-- Eliminar arrival airport = 0
+DELETE FROM #TemporaryFlights
+WHERE Arrival_Airport = '0';
+
 -- TRANSFORM
 -- Cargar datos en DimPassenger
 INSERT INTO DimPassenger (PassengerID, FirstName, LastName, Gender)
@@ -47,12 +51,12 @@ FROM #TemporaryFlights;
 
 -- Cargar datos en DimCountry
 INSERT INTO DimCountry (CountryName, CountryCode)
-SELECT DISTINCT Country_Name, Airport_Country_Code
+SELECT DISTINCT REPLACE(Country_Name, '"', '') AS CountryName, Airport_Country_Code
 FROM #TemporaryFlights;
 
 -- Cargar datos en DimAirport
 INSERT INTO DimAirport (AirportName, AirportCountryCode, CountryID)
-SELECT DISTINCT Airport_Name, Airport_Country_Code, dc.CountryID
+SELECT DISTINCT REPLACE(Airport_Name,'"','') AS AirportName, Airport_Country_Code, dc.CountryID
 FROM #TemporaryFlights tf
 JOIN DimCountry dc ON tf.Country_Name = dc.CountryName;
 
@@ -70,7 +74,7 @@ FROM #TemporaryFlights;
 INSERT INTO FactFlight (PassengerID, DepartureDate, ArrivalAirportID, PilotID, FlightStatus, Age, NationalityID, AirportCountryCode, CountryName, ContinentID)
 SELECT 
     tf.Passenger_ID,
-    TRY_CONVERT(DATE, tf.Departure_Date, 120) AS DepartureDate, -- Conversión segura
+    TRY_CONVERT(DATE, tf.Departure_Date, 101) AS DepartureDate, -- Conversión segura
     da.AirportID,
     dp.PilotID,
     tf.Flight_Status,

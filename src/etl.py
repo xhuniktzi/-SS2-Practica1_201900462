@@ -29,31 +29,19 @@ def execute_sql_script(script_path):
                 # Ejecutar cada script
                 with open(script_path, "r", encoding="utf_8") as file:
                     sql_script = file.read()
-                    # Divide el script en sentencias individuales si es necesario
                     sql_statements = sql_script.split(";")
                     for statement in sql_statements:
-                        if (
-                            statement.strip()
-                        ):  # Asegúrate de no ejecutar sentencias vacías
-                            cursor.execute(statement)
-                            print(
-                                f"Ejecutado: {statement[:30]}..."
-                            )  # Mostrar los primeros 30 caracteres del script
-
-                            # Si la sentencia es un SELECT, imprime los resultados
-                            if statement.strip().upper().startswith("SELECT"):
-                                # Obtener los nombres de las columnas
+                        fixed_statement = statement.strip()
+                        if fixed_statement:
+                            cursor.execute(fixed_statement)
+                            if cursor.description:
                                 columns = [column[0] for column in cursor.description]
-                                # Imprimir los nombres de las columnas
                                 print(" | ".join(columns))
                                 print("-" * 50)
-
-                                # Obtener las filas y mostrarlas
                                 rows = cursor.fetchall()
                                 for row in rows:
                                     print(" | ".join(str(value) for value in row))
                                 print("-" * 50)
-                # Confirma las transacciones si todo va bien
                 conn.commit()
                 print("Todos los scripts se ejecutaron correctamente.")
     except Exception as e:
@@ -61,12 +49,7 @@ def execute_sql_script(script_path):
         print(f"Ocurrió un error: {e}")
 
 
-def extract_info():
-    delete_model_sql: str = None
-    create_model_sql: str = None
-    load_info_sql: str = None
-    queries_sql: str = None
-
+def extract_info(delete_model_sql, create_model_sql, load_info_sql, queries_sql):
     menu_extract_str: str = """
 1. Script para Borrar Modelo
 2. Script para Crear Modelo
@@ -126,7 +109,9 @@ def main():
                     execute_sql_script(create_model_sql)
                 case 3:
                     delete_model_sql, create_model_sql, load_info_sql, queries_sql = (
-                        extract_info()
+                        extract_info(
+                            delete_model_sql, create_model_sql, load_info_sql, queries_sql
+                        )
                     )
                 case 4:
                     execute_sql_script(load_info_sql)

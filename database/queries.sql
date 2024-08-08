@@ -1,4 +1,4 @@
-PRINT('Consulta 1');
+
 SELECT 'DimPassenger' AS TableName, COUNT(*) AS RecordCount FROM DimPassenger
 UNION ALL
 SELECT 'DimCountry', COUNT(*) FROM DimCountry
@@ -11,7 +11,7 @@ SELECT 'DimPilot', COUNT(*) FROM DimPilot
 UNION ALL
 SELECT 'FactFlight', COUNT(*) FROM FactFlight;
 
-PRINT('Consulta 2');
+
 SELECT 
     Gender,
     COUNT(*) AS PassengerCount,
@@ -19,39 +19,15 @@ SELECT
 FROM DimPassenger
 GROUP BY Gender;
 
-PRINT('Consulta 3');
-WITH MonthlyDepartures AS (
-    SELECT 
-        c.CountryName,
-        FORMAT(f.DepartureDate, 'MM-yyyy') AS MonthYear,
-        COUNT(*) AS DepartureCount
-    FROM FactFlight f
-    JOIN DimCountry c ON f.NationalityID = c.CountryID
-    GROUP BY c.CountryName, FORMAT(f.DepartureDate, 'MM-yyyy')
-),
-MaxDepartures AS (
-    SELECT 
-        CountryName,
-        MonthYear,
-        DepartureCount,
-        RANK() OVER (PARTITION BY CountryName ORDER BY DepartureCount DESC) AS Rank
-    FROM MonthlyDepartures
-)
-SELECT CountryName, MonthYear, DepartureCount
-FROM MaxDepartures
-WHERE Rank = 1
-ORDER BY CountryName;
+SELECT 
+    c.CountryName,
+    COUNT(*) AS FlightCount
+FROM FactFlight f
+JOIN DimCountry c ON f.NationalityID = c.CountryID
+GROUP BY c.CountryName
+ORDER BY FlightCount DESC;
 
-PRINT('Consulta 4');
--- SELECT 
---     c.CountryName,
---     COUNT(*) AS FlightCount
--- FROM FactFlight f
--- JOIN DimCountry c ON f.NationalityID = c.CountryID
--- GROUP BY c.CountryName
--- ORDER BY FlightCount DESC;
 
-PRINT('Consulta 5');
 SELECT TOP 5
     a.AirportName,
     COUNT(*) AS PassengerCount
@@ -60,14 +36,7 @@ JOIN DimAirport a ON f.ArrivalAirportID = a.AirportID
 GROUP BY a.AirportName
 ORDER BY PassengerCount DESC;
 
-PRINT('Consulta 6');
--- SELECT 
---     FlightStatus,
---     COUNT(*) AS FlightCount
--- FROM FactFlight
--- GROUP BY FlightStatus;
 
-PRINT('Consulta 7');
 SELECT TOP 5
     c.CountryName,
     COUNT(*) AS VisitCount
@@ -76,7 +45,6 @@ JOIN DimCountry c ON f.NationalityID = c.CountryID
 GROUP BY c.CountryName
 ORDER BY VisitCount DESC;
 
-PRINT('Consulta 8');
 SELECT TOP 5
     ct.ContinentName,
     COUNT(*) AS VisitCount
@@ -85,7 +53,6 @@ JOIN DimContinent ct ON f.ContinentID = ct.ContinentID
 GROUP BY ct.ContinentName
 ORDER BY VisitCount DESC;
 
-PRINT('Consulta 9');
 SELECT TOP 5
     Age,
     Gender,
@@ -95,7 +62,6 @@ JOIN DimPassenger p ON f.PassengerID = p.PassengerID
 GROUP BY Age, Gender
 ORDER BY TravelCount DESC;
 
-PRINT('Consulta 10');
 SELECT 
     FORMAT(DepartureDate, 'MM-yyyy') AS MonthYear,
     COUNT(*) AS FlightCount

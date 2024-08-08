@@ -40,7 +40,7 @@ CREATE TABLE FactFlight (
     FlightStatus NVARCHAR(50),
     Age INT,
     NationalityID INT,
-    AirportCountryCode NVARCHAR(10),
+    AirportCountryCode NVARCHAR(50),
     CountryName NVARCHAR(100),
     ContinentID INT,
     FOREIGN KEY (PassengerID) REFERENCES DimPassenger(PassengerID),
