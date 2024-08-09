@@ -1,0 +1,513 @@
+TableName | RecordCount
+--------------------------------------------------
+DimPassenger | 97743
+DimCountry | 262
+DimAirport | 8828
+DimContinent | 13
+DimPilot | 94052
+FactFlight | 95453
+--------------------------------------------------
+Gender | PassengerCount | Percentage
+--------------------------------------------------
+Male | 49166 | 50.30
+Female | 48577 | 49.70
+--------------------------------------------------
+CountryName | 01-2022 | 02-2022 | 03-2022 | 04-2022 | 05-2022 | 06-2022 | 07-2022 | 08-2022 | 09-2022 | 10-2022 | 11-2022 | 12-2022
+--------------------------------------------------
+Afghanistan | 38 | 23 | 33 | 32 | 30 | 29 | 38 | 29 | 23 | 41 | 35 | 21
+Albania | 1 | 1 | 2 | 0 | 1 | 1 | 0 | 1 | 0 | 3 | 2 | 0
+Algeria | 30 | 33 | 42 | 39 | 31 | 44 | 31 | 44 | 39 | 37 | 43 | 35
+American Samoa | 4 | 3 | 4 | 5 | 8 | 1 | 5 | 3 | 4 | 1 | 5 | 2
+Andorra | 1 | 0 | 1 | 0 | 0 | 0 | 1 | 1 | 0 | 0 | 3 | 0
+Angola | 47 | 32 | 38 | 37 | 45 | 39 | 33 | 33 | 45 | 37 | 31 | 28
+Anguilla | 1 | 0 | 0 | 5 | 2 | 1 | 1 | 0 | 1 | 1 | 2 | 0
+Antigua and Barbuda | 1 | 2 | 4 | 1 | 4 | 0 | 3 | 0 | 3 | 0 | 1 | 1
+Argentina | 120 | 84 | 96 | 97 | 104 | 97 | 106 | 100 | 116 | 108 | 96 | 117
+Armenia | 2 | 3 | 1 | 3 | 2 | 2 | 2 | 2 | 0 | 1 | 1 | 2
+Aruba | 1 | 0 | 0 | 0 | 4 | 0 | 0 | 1 | 1 | 2 | 0 | 0
+Australia | 519 | 511 | 547 | 529 | 547 | 529 | 531 | 581 | 570 | 546 | 563 | 490
+Austria | 3 | 2 | 9 | 8 | 6 | 5 | 11 | 9 | 6 | 5 | 13 | 14
+Azerbaijan | 4 | 8 | 9 | 9 | 5 | 9 | 4 | 8 | 5 | 10 | 7 | 9
+Bahamas | 28 | 27 | 29 | 32 | 41 | 29 | 27 | 44 | 34 | 33 | 38 | 40
+Bahrain | 0 | 2 | 0 | 0 | 3 | 2 | 1 | 3 | 0 | 1 | 0 | 0
+Bangladesh | 10 | 12 | 22 | 14 | 16 | 13 | 13 | 16 | 17 | 18 | 17 | 12
+Barbados | 0 | 3 | 1 | 0 | 0 | 0 | 2 | 1 | 1 | 0 | 2 | 3
+Belarus | 7 | 4 | 11 | 6 | 2 | 7 | 7 | 3 | 1 | 5 | 7 | 7
+Belgium | 3 | 4 | 10 | 8 | 4 | 8 | 9 | 11 | 3 | 4 | 5 | 3
+Belize | 17 | 27 | 29 | 17 | 19 | 24 | 24 | 18 | 18 | 24 | 18 | 27
+Benin | 2 | 8 | 2 | 4 | 9 | 6 | 1 | 3 | 4 | 3 | 6 | 3
+Bermuda | 2 | 1 | 2 | 4 | 1 | 1 | 2 | 1 | 0 | 4 | 3 | 0
+Bhutan | 4 | 2 | 3 | 2 | 8 | 4 | 4 | 2 | 0 | 8 | 1 | 8
+Bosnia and Herzegovina | 4 | 5 | 7 | 3 | 2 | 6 | 5 | 3 | 4 | 3 | 5 | 0
+Botswana | 14 | 10 | 15 | 18 | 14 | 11 | 11 | 10 | 19 | 24 | 12 | 16
+Brazil | 327 | 263 | 318 | 309 | 336 | 287 | 318 | 340 | 287 | 331 | 279 | 297
+British Indian Ocean Territory | 2 | 1 | 1 | 1 | 0 | 0 | 0 | 3 | 1 | 2 | 1 | 4
+Brunei Darussalam | 2 | 2 | 0 | 0 | 2 | 0 | 0 | 0 | 0 | 0 | 0 | 2
+Bulgaria | 12 | 10 | 10 | 2 | 13 | 11 | 13 | 7 | 7 | 7 | 8 | 10
+Burkina Faso | 22 | 25 | 22 | 13 | 28 | 22 | 22 | 19 | 21 | 29 | 28 | 23
+Burundi | 3 | 1 | 4 | 2 | 2 | 2 | 3 | 3 | 5 | 2 | 5 | 7
+C├┤te d'Ivoire | 21 | 14 | 25 | 26 | 25 | 28 | 29 | 20 | 23 | 25 | 13 | 25
+Cabo Verde | 5 | 11 | 9 | 6 | 15 | 10 | 5 | 11 | 19 | 8 | 8 | 8
+Cambodia | 8 | 9 | 11 | 13 | 13 | 13 | 8 | 12 | 11 | 2 | 14 | 10
+Cameroon | 24 | 19 | 11 | 23 | 17 | 14 | 24 | 21 | 17 | 23 | 18 | 18
+Canada | 481 | 441 | 442 | 479 | 451 | 432 | 483 | 491 | 430 | 479 | 428 | 455
+Cayman Islands | 2 | 1 | 5 | 3 | 3 | 2 | 2 | 2 | 1 | 2 | 3 | 1
+Central African Republic | 26 | 19 | 22 | 26 | 24 | 20 | 19 | 15 | 20 | 14 | 24 | 12
+Chad | 16 | 21 | 20 | 20 | 21 | 19 | 18 | 16 | 24 | 27 | 19 | 22
+Chile | 48 | 38 | 63 | 47 | 42 | 63 | 55 | 56 | 48 | 60 | 40 | 45
+China | 235 | 209 | 218 | 216 | 241 | 230 | 241 | 258 | 245 | 256 | 228 | 202
+Christmas Island | 2 | 0 | 0 | 2 | 0 | 2 | 1 | 0 | 1 | 0 | 3 | 0
+Cocos (Keeling) Islands | 0 | 0 | 0 | 0 | 2 | 0 | 0 | 0 | 2 | 1 | 2 | 1
+Colombia | 125 | 174 | 159 | 153 | 159 | 118 | 127 | 162 | 138 | 133 | 150 | 147
+Comoros | 5 | 3 | 3 | 3 | 6 | 8 | 0 | 2 | 5 | 1 | 6 | 5
+Congo | 88 | 112 | 84 | 112 | 112 | 88 | 80 | 100 | 92 | 96 | 68 | 108
+Cook Islands | 3 | 10 | 9 | 7 | 6 | 7 | 11 | 12 | 8 | 9 | 8 | 8
+Costa Rica | 30 | 29 | 25 | 33 | 32 | 29 | 26 | 23 | 19 | 26 | 20 | 21
+Croatia | 11 | 7 | 11 | 11 | 13 | 11 | 5 | 9 | 10 | 9 | 6 | 8
+Cuba | 36 | 25 | 27 | 25 | 24 | 27 | 33 | 38 | 30 | 28 | 27 | 32
+Cyprus | 4 | 5 | 4 | 5 | 1 | 3 | 4 | 4 | 8 | 5 | 7 | 4
+Czechia | 9 | 12 | 9 | 13 | 13 | 14 | 10 | 16 | 10 | 6 | 16 | 13
+Denmark | 17 | 13 | 13 | 10 | 13 | 16 | 15 | 16 | 23 | 19 | 15 | 14
+Djibouti | 3 | 3 | 6 | 6 | 5 | 4 | 2 | 5 | 1 | 2 | 5 | 2
+Dominica | 2 | 1 | 2 | 1 | 2 | 0 | 3 | 3 | 4 | 2 | 5 | 2
+Dominican Republic | 12 | 11 | 15 | 14 | 11 | 13 | 14 | 13 | 13 | 10 | 8 | 16
+Ecuador | 25 | 24 | 24 | 25 | 30 | 24 | 20 | 30 | 13 | 14 | 27 | 31
+Egypt | 25 | 17 | 21 | 28 | 30 | 29 | 30 | 36 | 31 | 18 | 19 | 22
+El Salvador | 0 | 2 | 3 | 1 | 1 | 0 | 2 | 2 | 1 | 1 | 0 | 1
+Equatorial Guinea | 4 | 6 | 5 | 5 | 7 | 7 | 4 | 6 | 6 | 3 | 3 | 5
+Eritrea | 5 | 2 | 3 | 3 | 6 | 4 | 7 | 7 | 3 | 3 | 2 | 3
+Estonia | 3 | 5 | 5 | 4 | 5 | 2 | 4 | 2 | 9 | 5 | 5 | 3
+Eswatini | 3 | 2 | 2 | 2 | 4 | 5 | 0 | 0 | 2 | 2 | 0 | 1
+Ethiopia | 50 | 40 | 47 | 47 | 35 | 52 | 46 | 48 | 43 | 57 | 54 | 51
+Falkland Islands (Malvinas) | 7 | 3 | 3 | 1 | 9 | 1 | 1 | 2 | 6 | 0 | 9 | 2
+Faroe Islands | 0 | 1 | 1 | 2 | 0 | 1 | 1 | 2 | 0 | 1 | 2 | 0
+Fiji | 35 | 17 | 26 | 25 | 20 | 36 | 20 | 21 | 26 | 22 | 23 | 29
+Finland | 33 | 29 | 28 | 25 | 39 | 24 | 29 | 30 | 20 | 23 | 36 | 22
+France | 114 | 102 | 133 | 112 | 140 | 125 | 105 | 112 | 109 | 116 | 100 | 108
+French Guiana | 7 | 7 | 9 | 9 | 6 | 7 | 5 | 9 | 12 | 3 | 5 | 4
+French Polynesia | 46 | 44 | 48 | 39 | 41 | 52 | 56 | 36 | 40 | 47 | 44 | 41
+Gabon | 29 | 30 | 28 | 20 | 27 | 30 | 25 | 28 | 27 | 26 | 31 | 25
+Gambia | 1 | 2 | 2 | 0 | 1 | 2 | 0 | 0 | 1 | 2 | 3 | 1
+Georgia | 4 | 5 | 1 | 3 | 1 | 2 | 2 | 2 | 5 | 2 | 6 | 2
+Germany | 94 | 90 | 99 | 81 | 122 | 93 | 98 | 110 | 98 | 91 | 88 | 82
+Ghana | 2 | 5 | 3 | 3 | 0 | 3 | 4 | 3 | 6 | 6 | 3 | 3
+Gibraltar | 1 | 1 | 0 | 1 | 1 | 1 | 1 | 0 | 2 | 1 | 0 | 0
+Greece | 46 | 35 | 42 | 35 | 43 | 41 | 37 | 44 | 41 | 36 | 32 | 47
+Greenland | 29 | 31 | 29 | 36 | 34 | 21 | 23 | 38 | 26 | 28 | 28 | 36
+Grenada | 0 | 2 | 1 | 2 | 1 | 0 | 4 | 4 | 2 | 1 | 3 | 3
+Guadeloupe | 6 | 4 | 8 | 5 | 6 | 4 | 2 | 1 | 7 | 5 | 5 | 3
+Guam | 3 | 4 | 2 | 1 | 2 | 0 | 0 | 4 | 3 | 2 | 4 | 1
+Guatemala | 20 | 21 | 22 | 18 | 22 | 25 | 20 | 20 | 17 | 19 | 21 | 20
+Guernsey | 1 | 1 | 0 | 3 | 0 | 0 | 2 | 1 | 1 | 5 | 1 | 1
+Guinea | 10 | 9 | 16 | 11 | 12 | 7 | 9 | 16 | 7 | 7 | 7 | 10
+Guinea-Bissau | 0 | 2 | 1 | 1 | 0 | 0 | 0 | 4 | 0 | 1 | 1 | 0
+Guyana | 21 | 29 | 18 | 19 | 27 | 21 | 24 | 30 | 24 | 32 | 21 | 22
+Haiti | 3 | 3 | 5 | 4 | 6 | 5 | 5 | 6 | 8 | 4 | 4 | 3
+Honduras | 36 | 24 | 29 | 22 | 31 | 27 | 29 | 21 | 32 | 21 | 21 | 19
+Hong Kong | 2 | 2 | 5 | 1 | 3 | 2 | 4 | 2 | 4 | 4 | 3 | 4
+Hungary | 7 | 6 | 6 | 5 | 2 | 8 | 4 | 4 | 7 | 4 | 6 | 6
+Iceland | 30 | 28 | 30 | 44 | 39 | 24 | 36 | 29 | 36 | 45 | 36 | 32
+India | 130 | 113 | 118 | 103 | 120 | 141 | 135 | 141 | 122 | 133 | 110 | 107
+Indonesia | 179 | 208 | 207 | 180 | 234 | 184 | 210 | 203 | 180 | 213 | 177 | 160
+Iraq | 17 | 5 | 5 | 6 | 7 | 10 | 12 | 6 | 12 | 17 | 15 | 11
+Ireland | 13 | 16 | 19 | 13 | 20 | 11 | 17 | 12 | 17 | 20 | 19 | 16
+Isle of Man | 1 | 0 | 2 | 1 | 2 | 2 | 2 | 0 | 1 | 0 | 0 | 1
+Israel | 17 | 13 | 10 | 9 | 16 | 16 | 17 | 14 | 14 | 12 | 15 | 10
+Italy | 53 | 51 | 45 | 70 | 51 | 45 | 51 | 60 | 60 | 51 | 52 | 56
+Jamaica | 9 | 8 | 3 | 10 | 7 | 6 | 5 | 5 | 6 | 8 | 7 | 9
+Japan | 97 | 78 | 83 | 87 | 93 | 100 | 67 | 89 | 84 | 82 | 74 | 79
+Jersey | 0 | 0 | 0 | 2 | 0 | 1 | 0 | 0 | 0 | 0 | 1 | 0
+Jordan | 5 | 2 | 3 | 2 | 5 | 3 | 3 | 5 | 6 | 4 | 1 | 4
+Kazakhstan | 27 | 30 | 23 | 24 | 16 | 26 | 31 | 18 | 21 | 26 | 18 | 24
+Kenya | 34 | 27 | 44 | 36 | 29 | 31 | 46 | 39 | 43 | 48 | 34 | 32
+Kiribati | 14 | 23 | 17 | 27 | 22 | 24 | 28 | 15 | 19 | 24 | 21 | 18
+Kuwait | 3 | 2 | 1 | 1 | 2 | 2 | 2 | 2 | 1 | 1 | 5 | 1
+Kyrgyzstan | 1 | 5 | 7 | 5 | 3 | 4 | 1 | 2 | 2 | 1 | 4 | 3
+Lao People's Democratic Republic | 22 | 12 | 7 | 19 | 19 | 16 | 15 | 10 | 17 | 7 | 9 | 18
+Latvia | 2 | 0 | 3 | 2 | 1 | 2 | 4 | 7 | 3 | 6 | 0 | 4
+Lebanon | 1 | 3 | 3 | 1 | 1 | 2 | 4 | 0 | 3 | 3 | 2 | 2
+Lesotho | 16 | 15 | 22 | 18 | 8 | 15 | 18 | 12 | 18 | 10 | 8 | 17
+Liberia | 25 | 8 | 21 | 8 | 5 | 15 | 8 | 15 | 14 | 16 | 13 | 12
+Libya | 22 | 20 | 19 | 15 | 26 | 16 | 18 | 20 | 13 | 15 | 14 | 23
+Lithuania | 3 | 6 | 5 | 3 | 9 | 2 | 10 | 4 | 7 | 4 | 6 | 4
+Luxembourg | 1 | 1 | 2 | 0 | 1 | 0 | 0 | 1 | 0 | 1 | 1 | 1
+Macao | 2 | 2 | 0 | 1 | 4 | 0 | 1 | 1 | 1 | 0 | 2 | 0
+Madagascar | 45 | 54 | 68 | 54 | 61 | 52 | 69 | 54 | 43 | 51 | 50 | 62
+Malawi | 13 | 6 | 9 | 11 | 7 | 13 | 8 | 8 | 21 | 15 | 6 | 5
+Malaysia | 54 | 51 | 50 | 48 | 49 | 64 | 68 | 65 | 74 | 47 | 71 | 46
+Maldives | 4 | 13 | 13 | 7 | 13 | 10 | 15 | 10 | 9 | 14 | 14 | 11
+Mali | 15 | 10 | 9 | 11 | 9 | 12 | 10 | 14 | 13 | 7 | 9 | 13
+Malta | 1 | 0 | 1 | 4 | 1 | 1 | 2 | 2 | 1 | 2 | 1 | 0
+Marshall Islands | 27 | 28 | 31 | 26 | 21 | 27 | 35 | 50 | 23 | 30 | 26 | 28
+Martinique | 2 | 0 | 3 | 0 | 0 | 0 | 0 | 2 | 1 | 1 | 1 | 0
+Mauritania | 20 | 14 | 16 | 18 | 13 | 17 | 20 | 16 | 14 | 19 | 17 | 15
+Mauritius | 0 | 3 | 2 | 2 | 0 | 2 | 0 | 2 | 2 | 3 | 5 | 3
+Mayotte | 2 | 1 | 0 | 0 | 1 | 2 | 1 | 1 | 2 | 1 | 0 | 2
+Mexico | 91 | 82 | 116 | 90 | 83 | 99 | 85 | 82 | 83 | 103 | 83 | 89
+Monaco | 2 | 1 | 0 | 0 | 0 | 1 | 1 | 0 | 1 | 0 | 0 | 1
+Mongolia | 20 | 21 | 17 | 22 | 23 | 27 | 22 | 20 | 25 | 31 | 16 | 19
+Montenegro | 4 | 5 | 2 | 4 | 1 | 6 | 3 | 6 | 2 | 8 | 1 | 3
+Montserrat | 3 | 0 | 0 | 0 | 0 | 1 | 1 | 4 | 1 | 1 | 1 | 5
+Morocco | 21 | 28 | 18 | 18 | 20 | 21 | 29 | 21 | 24 | 20 | 17 | 23
+Mozambique | 39 | 25 | 31 | 25 | 32 | 44 | 32 | 43 | 34 | 33 | 29 | 30
+Myanmar | 36 | 30 | 38 | 38 | 21 | 49 | 41 | 36 | 35 | 43 | 46 | 49
+Nauru | 1 | 0 | 0 | 0 | 2 | 0 | 0 | 0 | 1 | 1 | 0 | 2
+Nepal | 43 | 26 | 36 | 33 | 44 | 36 | 33 | 37 | 42 | 36 | 42 | 33
+Netherlands | 11 | 13 | 13 | 12 | 19 | 7 | 10 | 22 | 15 | 16 | 11 | 13
+New Caledonia | 9 | 15 | 15 | 15 | 11 | 14 | 13 | 13 | 11 | 12 | 14 | 9
+New Zealand | 46 | 47 | 54 | 48 | 52 | 67 | 58 | 46 | 42 | 47 | 43 | 44
+Nicaragua | 19 | 19 | 19 | 15 | 16 | 11 | 13 | 5 | 15 | 15 | 12 | 8
+Niger | 6 | 5 | 7 | 7 | 9 | 2 | 4 | 6 | 6 | 5 | 2 | 1
+Nigeria | 23 | 15 | 21 | 26 | 22 | 29 | 26 | 24 | 25 | 26 | 22 | 19
+Niue | 3 | 2 | 1 | 3 | 1 | 0 | 2 | 0 | 0 | 0 | 0 | 3
+Norfolk Island | 0 | 1 | 1 | 3 | 0 | 0 | 2 | 0 | 1 | 0 | 0 | 2
+North Macedonia | 0 | 1 | 0 | 2 | 1 | 2 | 6 | 5 | 2 | 1 | 4 | 2
+Northern Mariana Islands | 2 | 3 | 5 | 1 | 7 | 5 | 0 | 4 | 4 | 4 | 5 | 3
+Norway | 44 | 39 | 48 | 48 | 63 | 39 | 35 | 39 | 41 | 50 | 35 | 33
+Oman | 13 | 22 | 17 | 20 | 17 | 19 | 20 | 19 | 13 | 14 | 17 | 10
+Pakistan | 65 | 63 | 75 | 67 | 54 | 59 | 63 | 57 | 60 | 56 | 54 | 58
+Palau | 0 | 1 | 1 | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 2 | 0
+Panama | 36 | 36 | 32 | 28 | 28 | 41 | 34 | 35 | 38 | 32 | 38 | 28
+Papua New Guinea | 370 | 331 | 353 | 331 | 349 | 328 | 385 | 322 | 348 | 340 | 322 | 362
+Paraguay | 12 | 18 | 21 | 11 | 15 | 10 | 10 | 8 | 15 | 13 | 13 | 16
+Peru | 36 | 44 | 38 | 43 | 56 | 40 | 43 | 44 | 50 | 31 | 44 | 42
+Philippines | 69 | 67 | 63 | 63 | 89 | 58 | 65 | 80 | 59 | 58 | 76 | 61
+Poland | 16 | 23 | 17 | 19 | 18 | 14 | 10 | 21 | 17 | 19 | 18 | 19
+Portugal | 22 | 17 | 28 | 22 | 23 | 19 | 8 | 21 | 26 | 27 | 25 | 22
+Puerto Rico | 10 | 11 | 19 | 9 | 13 | 14 | 10 | 17 | 11 | 15 | 11 | 20
+Qatar | 3 | 4 | 1 | 4 | 3 | 2 | 7 | 5 | 3 | 3 | 2 | 2
+R├⌐union | 1 | 3 | 2 | 1 | 0 | 1 | 3 | 0 | 2 | 2 | 2 | 3
+Romania | 14 | 9 | 15 | 13 | 22 | 19 | 15 | 15 | 9 | 16 | 14 | 24
+Russian Federation | 208 | 164 | 177 | 185 | 183 | 182 | 206 | 184 | 191 | 181 | 193 | 193
+Rwanda | 5 | 1 | 5 | 8 | 4 | 6 | 6 | 2 | 2 | 5 | 1 | 5
+Saint Barth├⌐lemy | 0 | 1 | 1 | 0 | 1 | 0 | 1 | 0 | 2 | 0 | 3 | 2
+Saint Kitts and Nevis | 2 | 2 | 3 | 0 | 0 | 0 | 2 | 3 | 3 | 5 | 2 | 1
+Saint Lucia | 2 | 3 | 1 | 1 | 2 | 0 | 1 | 3 | 0 | 1 | 3 | 1
+Saint Martin (French part) | 1 | 1 | 0 | 3 | 1 | 4 | 1 | 3 | 4 | 1 | 4 | 1
+Saint Pierre and Miquelon | 3 | 2 | 2 | 1 | 3 | 2 | 2 | 4 | 2 | 2 | 2 | 0
+Saint Vincent and the Grenadines | 2 | 3 | 4 | 2 | 6 | 6 | 5 | 4 | 5 | 1 | 2 | 6
+Samoa | 3 | 5 | 1 | 4 | 3 | 5 | 3 | 6 | 4 | 3 | 3 | 3
+Sao Tome and Principe | 7 | 0 | 2 | 2 | 1 | 5 | 3 | 2 | 0 | 1 | 5 | 1
+Saudi Arabia | 33 | 28 | 33 | 33 | 31 | 38 | 32 | 29 | 23 | 32 | 28 | 27
+Senegal | 17 | 4 | 9 | 9 | 16 | 11 | 14 | 14 | 13 | 27 | 16 | 9
+Serbia | 2 | 2 | 4 | 3 | 6 | 5 | 1 | 5 | 5 | 2 | 3 | 5
+Seychelles | 7 | 4 | 4 | 6 | 4 | 3 | 4 | 7 | 8 | 3 | 7 | 5
+Sierra Leone | 5 | 4 | 8 | 7 | 5 | 7 | 11 | 10 | 6 | 6 | 8 | 7
+Singapore | 1 | 4 | 4 | 4 | 8 | 2 | 4 | 0 | 2 | 7 | 4 | 4
+Sint Maarten (Dutch part) | 0 | 0 | 1 | 0 | 0 | 1 | 0 | 2 | 1 | 1 | 2 | 1
+Slovakia | 8 | 7 | 5 | 6 | 7 | 8 | 5 | 3 | 14 | 2 | 5 | 5
+Slovenia | 3 | 3 | 3 | 2 | 5 | 2 | 2 | 1 | 1 | 2 | 5 | 3
+Solomon Islands | 33 | 31 | 41 | 47 | 34 | 34 | 38 | 41 | 35 | 29 | 34 | 33
+Somalia | 17 | 17 | 20 | 22 | 20 | 21 | 20 | 24 | 15 | 13 | 15 | 22
+South Africa | 88 | 73 | 77 | 74 | 80 | 92 | 91 | 88 | 77 | 78 | 73 | 85
+South Sudan | 3 | 6 | 1 | 4 | 3 | 3 | 1 | 3 | 4 | 10 | 2 | 3
+Spain | 53 | 38 | 58 | 65 | 53 | 59 | 42 | 53 | 51 | 54 | 43 | 37
+Sri Lanka | 24 | 38 | 33 | 26 | 30 | 20 | 32 | 45 | 20 | 30 | 31 | 32
+Sudan | 29 | 24 | 19 | 18 | 23 | 17 | 19 | 21 | 33 | 25 | 20 | 16
+Suriname | 10 | 14 | 14 | 10 | 10 | 13 | 9 | 15 | 15 | 18 | 17 | 14
+Sweden | 46 | 48 | 53 | 27 | 51 | 43 | 67 | 39 | 41 | 62 | 54 | 48
+Switzerland | 12 | 6 | 9 | 14 | 12 | 14 | 13 | 21 | 10 | 14 | 11 | 10
+Syrian Arab Republic | 11 | 7 | 8 | 3 | 6 | 10 | 6 | 10 | 7 | 10 | 4 | 3
+Tajikistan | 2 | 2 | 3 | 4 | 2 | 3 | 6 | 4 | 4 | 6 | 2 | 5
+Thailand | 40 | 41 | 38 | 53 | 40 | 37 | 41 | 41 | 40 | 37 | 39 | 53
+Timor-Leste | 9 | 8 | 14 | 5 | 7 | 10 | 7 | 9 | 8 | 3 | 11 | 8
+Togo | 2 | 3 | 0 | 1 | 3 | 1 | 1 | 4 | 2 | 3 | 2 | 1
+Tonga | 6 | 6 | 6 | 6 | 8 | 6 | 7 | 5 | 6 | 5 | 2 | 6
+Trinidad and Tobago | 0 | 1 | 1 | 3 | 1 | 2 | 2 | 1 | 0 | 2 | 5 | 5
+Tunisia | 11 | 8 | 7 | 7 | 10 | 9 | 7 | 10 | 10 | 10 | 10 | 6
+Turkey | 61 | 60 | 54 | 58 | 59 | 53 | 64 | 70 | 55 | 63 | 51 | 56
+Turkmenistan | 6 | 4 | 3 | 6 | 4 | 8 | 3 | 2 | 4 | 5 | 5 | 4
+Turks and Caicos Islands | 6 | 2 | 6 | 4 | 5 | 7 | 6 | 3 | 3 | 9 | 6 | 11
+Tuvalu | 1 | 1 | 2 | 3 | 1 | 0 | 1 | 2 | 0 | 2 | 1 | 2
+Uganda | 14 | 12 | 13 | 8 | 16 | 8 | 21 | 10 | 17 | 14 | 12 | 9
+Ukraine | 38 | 34 | 34 | 23 | 37 | 24 | 40 | 32 | 37 | 37 | 36 | 26
+United Arab Emirates | 11 | 11 | 18 | 14 | 14 | 17 | 11 | 13 | 16 | 11 | 11 | 11
+United Kingdom | 117 | 119 | 117 | 125 | 121 | 106 | 103 | 115 | 111 | 120 | 126 | 115
+United States | 1933 | 1673 | 1942 | 1751 | 1866 | 1803 | 1906 | 1871 | 1805 | 1902 | 1857 | 1802
+United States Minor Outlying Islands | 2 | 1 | 5 | 3 | 4 | 3 | 2 | 1 | 2 | 1 | 2 | 1
+Uruguay | 17 | 17 | 11 | 7 | 20 | 17 | 10 | 11 | 6 | 18 | 9 | 20
+Uzbekistan | 10 | 18 | 12 | 12 | 10 | 12 | 8 | 10 | 5 | 13 | 7 | 11
+Vanuatu | 25 | 24 | 24 | 26 | 21 | 35 | 29 | 41 | 35 | 28 | 13 | 26
+Viet Nam | 30 | 25 | 34 | 19 | 36 | 38 | 34 | 30 | 32 | 33 | 34 | 23
+Wallis and Futuna | 2 | 2 | 0 | 0 | 1 | 4 | 4 | 0 | 2 | 0 | 2 | 0
+Western Sahara | 4 | 3 | 3 | 8 | 4 | 3 | 3 | 3 | 4 | 6 | 2 | 6
+Yemen | 13 | 25 | 15 | 14 | 14 | 18 | 16 | 17 | 13 | 16 | 11 | 14
+Zambia | 22 | 18 | 14 | 15 | 24 | 19 | 22 | 20 | 19 | 12 | 17 | 20
+Zimbabwe | 9 | 11 | 18 | 11 | 13 | 9 | 10 | 19 | 10 | 14 | 11 | 13
+--------------------------------------------------
+CountryName | FlightCount
+--------------------------------------------------
+United States | 22111
+Australia | 6463
+Canada | 5492
+Papua New Guinea | 4141
+Brazil | 3692
+China | 2779
+Indonesia | 2335
+Russian Federation | 2247
+Colombia | 1745
+India | 1473
+United Kingdom | 1395
+France | 1376
+Argentina | 1241
+Germany | 1146
+Congo | 1140
+Mexico | 1086
+Japan | 1013
+South Africa | 976
+Philippines | 808
+Pakistan | 731
+Turkey | 704
+Malaysia | 687
+Madagascar | 663
+Italy | 645
+Spain | 606
+Chile | 605
+New Zealand | 594
+Sweden | 579
+Ethiopia | 570
+French Polynesia | 534
+Norway | 514
+Peru | 511
+Thailand | 500
+Greece | 479
+Myanmar | 462
+Algeria | 448
+Angola | 445
+Kenya | 443
+Nepal | 441
+Solomon Islands | 430
+Iceland | 409
+Panama | 406
+Bahamas | 402
+Ukraine | 398
+Mozambique | 397
+Afghanistan | 372
+Viet Nam | 368
+Saudi Arabia | 367
+Sri Lanka | 361
+Greenland | 359
+Marshall Islands | 352
+Cuba | 352
+Finland | 338
+Vanuatu | 327
+Gabon | 326
+Costa Rica | 313
+Honduras | 312
+Egypt | 306
+Fiji | 300
+Guyana | 288
+Ecuador | 287
+Kazakhstan | 284
+Nigeria | 278
+Burkina Faso | 274
+C├┤te d'Ivoire | 274
+Sudan | 264
+Mongolia | 263
+Belize | 262
+Morocco | 260
+Portugal | 260
+Kiribati | 252
+Guatemala | 245
+Chad | 243
+Central African Republic | 241
+Cameroon | 229
+Somalia | 226
+Zambia | 222
+Libya | 221
+Poland | 211
+Oman | 201
+Mauritania | 199
+Ireland | 193
+Yemen | 186
+Romania | 185
+Denmark | 184
+Bangladesh | 180
+Lesotho | 177
+Botswana | 174
+Lao People's Democratic Republic | 171
+Nicaragua | 167
+Israel | 163
+Uruguay | 163
+Paraguay | 162
+Netherlands | 162
+Liberia | 160
+Puerto Rico | 160
+Senegal | 159
+Suriname | 159
+United Arab Emirates | 158
+Uganda | 154
+New Caledonia | 151
+Dominican Republic | 150
+Zimbabwe | 148
+Switzerland | 146
+Czechia | 141
+Maldives | 133
+Mali | 132
+Uzbekistan | 128
+Cambodia | 124
+Iraq | 123
+Malawi | 122
+Guinea | 121
+Cabo Verde | 115
+Croatia | 111
+Bulgaria | 110
+Tunisia | 105
+Timor-Leste | 99
+Cook Islands | 98
+Austria | 91
+Azerbaijan | 87
+Syrian Arab Republic | 85
+Sierra Leone | 84
+French Guiana | 83
+Jamaica | 83
+Slovakia | 75
+Belgium | 72
+Tonga | 69
+Turks and Caicos Islands | 68
+Belarus | 67
+Hungary | 65
+Lithuania | 63
+Seychelles | 62
+Equatorial Guinea | 61
+Niger | 60
+Haiti | 56
+Guadeloupe | 56
+Cyprus | 54
+Turkmenistan | 54
+Estonia | 52
+Benin | 51
+Rwanda | 50
+Western Sahara | 49
+Eritrea | 48
+Comoros | 47
+Bosnia and Herzegovina | 47
+Bhutan | 46
+Saint Vincent and the Grenadines | 46
+American Samoa | 45
+Montenegro | 45
+Djibouti | 44
+Falkland Islands (Malvinas) | 44
+Singapore | 44
+Serbia | 43
+Samoa | 43
+Northern Mariana Islands | 43
+Tajikistan | 43
+South Sudan | 43
+Jordan | 43
+Ghana | 41
+Burundi | 39
+Qatar | 39
+Kyrgyzstan | 38
+Hong Kong | 36
+Georgia | 35
+Latvia | 34
+Slovenia | 32
+Sao Tome and Principe | 29
+United States Minor Outlying Islands | 27
+Cayman Islands | 27
+Dominica | 27
+Guam | 26
+North Macedonia | 26
+Saint Pierre and Miquelon | 25
+Lebanon | 25
+Mauritius | 24
+Saint Martin (French part) | 24
+Saint Kitts and Nevis | 23
+Trinidad and Tobago | 23
+Togo | 23
+Grenada | 23
+Kuwait | 23
+Eswatini | 23
+Bermuda | 21
+Armenia | 21
+Antigua and Barbuda | 20
+R├⌐union | 20
+Saint Lucia | 18
+Wallis and Futuna | 17
+Montserrat | 17
+Malta | 16
+Guernsey | 16
+British Indian Ocean Territory | 16
+Tuvalu | 16
+Gambia | 15
+Niue | 15
+Macao | 14
+El Salvador | 14
+Anguilla | 14
+Barbados | 13
+Mayotte | 13
+Isle of Man | 12
+Bahrain | 12
+Albania | 12
+Faroe Islands | 11
+Christmas Island | 11
+Saint Barth├⌐lemy | 11
+Guinea-Bissau | 10
+Norfolk Island | 10
+Martinique | 10
+Luxembourg | 9
+Gibraltar | 9
+Aruba | 9
+Sint Maarten (Dutch part) | 9
+Brunei Darussalam | 8
+Cocos (Keeling) Islands | 8
+Andorra | 7
+Nauru | 7
+Monaco | 7
+Palau | 5
+Jersey | 4
+--------------------------------------------------
+AirportName | PassengerCount
+--------------------------------------------------
+San Pedro Airport | 172
+Santa Maria Airport | 114
+San Fernando Airport | 93
+Djambala Airport | 76
+Maya-Maya Airport | 76
+--------------------------------------------------
+CountryName | VisitCount
+--------------------------------------------------
+United States | 22111
+Australia | 6463
+Canada | 5492
+Papua New Guinea | 4141
+Brazil | 3692
+--------------------------------------------------
+FlightCount | FlightStatus
+--------------------------------------------------
+31776 | Delayed
+31887 | Cancelled
+31790 | On Time
+--------------------------------------------------
+ContinentName | VisitCount
+--------------------------------------------------
+North America | 32095
+Asia | 17212
+Oceania | 13965
+Europe | 12214
+Africa | 10987
+--------------------------------------------------
+Age | Gender | TravelCount
+--------------------------------------------------
+39 | Female | 594
+46 | Male | 587
+89 | Male | 584
+67 | Female | 576
+24 | Male | 575
+--------------------------------------------------
+MonthYear | FlightCount
+--------------------------------------------------
+01-2022 | 8139
+02-2022 | 7455
+03-2022 | 8159
+04-2022 | 7734
+05-2022 | 8232
+06-2022 | 7869
+07-2022 | 8129
+08-2022 | 8262
+09-2022 | 7881
+10-2022 | 8155
+11-2022 | 7744
+12-2022 | 7694
+--------------------------------------------------
