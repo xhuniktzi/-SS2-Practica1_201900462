@@ -11,14 +11,13 @@ CREATE TABLE #TemporaryFlights(
 	[Country_Name] [nvarchar](50) NOT NULL,
 	[Airport_Continent] [nvarchar](50) NOT NULL,
 	[Continents] [nvarchar](50) NOT NULL,
-	[Departure_Date] [nvarchar](50) NOT NULL, -- Cambiado a VARCHAR
+	[Departure_Date] [nvarchar](50) NOT NULL,
 	[Arrival_Airport] [nvarchar](50) NOT NULL,
 	[Pilot_Name] [nvarchar](50) NOT NULL,
 	[Flight_Status] [nvarchar](50) NOT NULL
 ) ON [PRIMARY]
 
-
--- Cargar datos de pasajeros en la tabla de dimensiones
+-- TRANSFORM
 BULK INSERT #TemporaryFlights
 FROM '/data/passengers.csv'
 WITH (
@@ -28,7 +27,6 @@ WITH (
     TABLOCK
 );
 
--- Eliminar duplicados de la tabla temporal
 DELETE FROM #TemporaryFlights
 WHERE Passenger_ID IN (
     SELECT Passenger_ID
@@ -39,38 +37,31 @@ WHERE Passenger_ID IN (
     WHERE rn > 1
 );
 
--- Eliminar arrival airport = 0
 DELETE FROM #TemporaryFlights
 WHERE Arrival_Airport = '0';
 
--- TRANSFORM
--- Cargar datos en DimPassenger
+-- LOAD
 INSERT INTO DimPassenger (PassengerID, FirstName, LastName, Gender)
 SELECT DISTINCT Passenger_ID, First_Name, Last_Name, Gender
 FROM #TemporaryFlights;
 
--- Cargar datos en DimCountry
 INSERT INTO DimCountry (CountryName, CountryCode)
 SELECT DISTINCT REPLACE(Country_Name, '"', '') AS CountryName, Airport_Country_Code
 FROM #TemporaryFlights;
 
--- Cargar datos en DimAirport
 INSERT INTO DimAirport (AirportName, AirportCountryCode, CountryID)
 SELECT DISTINCT REPLACE(Airport_Name,'"','') AS AirportName, Airport_Country_Code, dc.CountryID
 FROM #TemporaryFlights tf
 JOIN DimCountry dc ON tf.Country_Name = dc.CountryName;
 
--- Cargar datos en DimContinent
 INSERT INTO DimContinent (ContinentName)
 SELECT DISTINCT Continents
 FROM #TemporaryFlights;
 
--- Cargar datos en DimPilot
 INSERT INTO DimPilot (PilotName)
 SELECT DISTINCT Pilot_Name
 FROM #TemporaryFlights;
 
--- LOAD
 INSERT INTO FactFlight (PassengerID, DepartureDate, ArrivalAirportID, PilotID, FlightStatus, Age, NationalityID, AirportCountryCode, CountryName, ContinentID)
 SELECT 
     tf.Passenger_ID,
