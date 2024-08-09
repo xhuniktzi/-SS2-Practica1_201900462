@@ -1,126 +1,132 @@
 from pathlib import Path
 import pyodbc
+from dotenv import load_dotenv
+import os
 
-# Configuración de la conexión a SQL Server
-server = "localhost"
-database = "etl_practica1"
-username = "sa"
-password = "BaseDatos2+"
-connection_string = (
-    f"DRIVER={{ODBC Driver 17 for SQL Server}};"
-    f"SERVER={server};"
-    f"DATABASE={database};"
-    f"UID={username};"
-    f"PWD={password}"
-)
+load_dotenv()
 
 
-# Función para ejecutar un script SQL
+def get_connection_string():
+    server = os.getenv("DB_SERVER")
+    database = os.getenv("DB_DATABASE")
+    username = os.getenv("DB_USERNAME")
+    password = os.getenv("DB_PASSWORD")
+
+    return (
+        f"DRIVER={{ODBC Driver 17 for SQL Server}};"
+        f"SERVER={server};"
+        f"DATABASE={database};"
+        f"UID={username};"
+        f"PWD={password}"
+    )
+
+
 def execute_sql_script(script_path):
+    if not script_path:
+        print("Ruta nula")
+        return
+
     try:
-        # Validar path
-        if script_path is None:
-            print("Ruta nula")
-            return
-        # Crear una conexión a la base de datos
-        with pyodbc.connect(connection_string) as conn:
-            # Crear un cursor
-            with conn.cursor() as cursor:
-                # Ejecutar cada script
-                with open(script_path, "r", encoding="utf_8") as file:
-                    sql_script = file.read()
-                    sql_statements = sql_script.split(";")
-                    for statement in sql_statements:
-                        fixed_statement = statement.strip()
-                        if fixed_statement:
-                            cursor.execute(fixed_statement)
-                            if cursor.description:
-                                columns = [column[0] for column in cursor.description]
-                                print(" | ".join(columns))
-                                print("-" * 50)
-                                rows = cursor.fetchall()
-                                for row in rows:
-                                    print(" | ".join(str(value) for value in row))
-                                print("-" * 50)
-                conn.commit()
-                print("Todos los scripts se ejecutaron correctamente.")
+        connection_string = get_connection_string()
+        with pyodbc.connect(connection_string) as conn, conn.cursor() as cursor, open(
+            script_path, "r", encoding="utf_8"
+        ) as file:
+            sql_statements = file.read().split(";")
+            execute_statements(cursor, sql_statements)
+            conn.commit()
+            print("Todos los scripts se ejecutaron correctamente.")
     except Exception as e:
-        # Manejo de errores
         print(f"Ocurrió un error: {e}")
 
 
-def extract_info(delete_model_sql, create_model_sql, load_info_sql, queries_sql):
-    menu_extract_str: str = """
+def execute_statements(cursor, sql_statements):
+    for statement in map(str.strip, sql_statements):
+        if statement:
+            cursor.execute(statement)
+            print_results(cursor)
+
+
+def print_results(cursor):
+    if cursor.description:
+        columns = [column[0] for column in cursor.description]
+        print(" | ".join(columns))
+        print("-" * 50)
+        for row in cursor.fetchall():
+            print(" | ".join(str(value) for value in row))
+        print("-" * 50)
+
+
+def get_script_paths():
+    menu_extract = """
 1. Script para Borrar Modelo
 2. Script para Crear Modelo
-3. Script para Cargar Informacion
+3. Script para Cargar Información
 4. Script para Consultas
 5. Salir
 """
+    paths = {
+        "delete_model": None,
+        "create_model": None,
+        "load_info": None,
+        "queries": None,
+    }
+
     while True:
-        print(menu_extract_str)
+        print(menu_extract)
         try:
-            match int(input("Selecciona una opcion: ")):
-                case 1:
-                    delete_model_sql = Path(input("/> ")).resolve()
-                    print(delete_model_sql)
-                case 2:
-                    create_model_sql = Path(input("/> ")).resolve()
-                    print(create_model_sql)
-                case 3:
-                    load_info_sql = Path(input("/> ")).resolve()
-                    print(load_info_sql)
-                case 4:
-                    queries_sql = Path(input("/> ")).resolve()
-                    print(queries_sql)
-                case 5:
-                    return (
-                        delete_model_sql,
-                        create_model_sql,
-                        load_info_sql,
-                        queries_sql,
-                    )
+            option = int(input("Selecciona una opción: "))
+            if option in range(1, 5):
+                script_path = Path(input("/> ")).resolve()
+                print(script_path)
+                if option == 1:
+                    paths["delete_model"] = script_path
+                elif option == 2:
+                    paths["create_model"] = script_path
+                elif option == 3:
+                    paths["load_info"] = script_path
+                elif option == 4:
+                    paths["queries"] = script_path
+            elif option == 5:
+                return paths
         except ValueError:
-            print("Opcion no valida")
+            print("Opción no válida")
             continue
 
 
 def main():
-    delete_model_sql: str = None
-    create_model_sql: str = None
-    load_info_sql: str = None
-    queries_sql: str = None
+    script_paths = {
+        "delete_model": None,
+        "create_model": None,
+        "load_info": None,
+        "queries": None,
+    }
 
-    menu_str: str = """
+    menu_main = """
 1. Borrar Modelo
 2. Crear Modelo
-3. Extraer Informacion
-4. Cargar Informacion
+3. Extraer Información
+4. Cargar Información
 5. Consultas
 6. Salir
 """
     while True:
-        print(menu_str)
+        print(menu_main)
         try:
-            match int(input("Selecciona una opcion: ")):
-                case 1:
-                    execute_sql_script(delete_model_sql)
-                case 2:
-                    execute_sql_script(create_model_sql)
-                case 3:
-                    delete_model_sql, create_model_sql, load_info_sql, queries_sql = (
-                        extract_info(
-                            delete_model_sql, create_model_sql, load_info_sql, queries_sql
-                        )
-                    )
-                case 4:
-                    execute_sql_script(load_info_sql)
-                case 5:
-                    execute_sql_script(queries_sql)
-                case 6:
-                    break
+            option = int(input("Selecciona una opción: "))
+            if option == 1:
+                execute_sql_script(script_paths["delete_model"])
+            elif option == 2:
+                execute_sql_script(script_paths["create_model"])
+            elif option == 3:
+                script_paths = get_script_paths()
+            elif option == 4:
+                execute_sql_script(script_paths["load_info"])
+            elif option == 5:
+                execute_sql_script(script_paths["queries"])
+            elif option == 6:
+                break
         except ValueError:
-            print("Opcion invalida")
+            print("Opción inválida")
             continue
 
 
