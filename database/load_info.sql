@@ -40,17 +40,29 @@ WHERE Passenger_ID IN (
 DELETE FROM #TemporaryFlights
 WHERE Arrival_Airport = '0';
 
+DELETE FROM #TemporaryFlights
+WHERE Continents not in ('North America','Asia','Africa','Oceania','South America','Europe','India');
+
+DELETE FROM #TemporaryFlights
+WHERE Airport_Name LIKE '%"%';
+
+DELETE FROM #TemporaryFlights
+WHERE Country_Name LIKE '%"%';
+
+DELETE FROM #TemporaryFlights
+WHERE PATINDEX('%[^ -~áéíóúÁÉÍÓÚ]%', Country_Name COLLATE Latin1_General_BIN) > 0; 
+
 -- LOAD
 INSERT INTO DimPassenger (PassengerID, FirstName, LastName, Gender)
 SELECT DISTINCT Passenger_ID, First_Name, Last_Name, Gender
 FROM #TemporaryFlights;
 
 INSERT INTO DimCountry (CountryName, CountryCode)
-SELECT DISTINCT REPLACE(Country_Name, '"', '') AS CountryName, Airport_Country_Code
+SELECT DISTINCT Country_Name AS CountryName, Airport_Country_Code
 FROM #TemporaryFlights;
 
 INSERT INTO DimAirport (AirportName, AirportCountryCode, CountryID)
-SELECT DISTINCT REPLACE(Airport_Name,'"','') AS AirportName, Airport_Country_Code, dc.CountryID
+SELECT DISTINCT Airport_Name AS AirportName, Airport_Country_Code, dc.CountryID
 FROM #TemporaryFlights tf
 JOIN DimCountry dc ON tf.Country_Name = dc.CountryName;
 
