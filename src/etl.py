@@ -21,10 +21,14 @@ def get_connection_string():
     )
 
 
-def execute_sql_script(script_path):
+def execute_sql_script(script_path, save_flag = False):
     if not script_path:
         print("Ruta nula")
         return
+    
+    if save_flag:
+        file = open("./output.txt", mode="w", encoding="utf_8")
+        file.close()
 
     try:
         connection_string = get_connection_string()
@@ -32,18 +36,21 @@ def execute_sql_script(script_path):
             script_path, "r", encoding="utf_8"
         ) as file:
             sql_statements = file.read().split(";")
-            execute_statements(cursor, sql_statements)
+            execute_statements(cursor, sql_statements, save_flag)
             conn.commit()
             print("Todos los scripts se ejecutaron correctamente.")
     except Exception as e:
         print(f"Ocurrió un error: {e}")
 
 
-def execute_statements(cursor, sql_statements):
+def execute_statements(cursor, sql_statements, save_flag):
     for statement in map(str.strip, sql_statements):
         if statement:
             cursor.execute(statement)
-            print_results(cursor)
+            if save_flag:
+                save_results(cursor)
+            else:
+                print_results(cursor)
 
 
 def print_results(cursor):
@@ -55,8 +62,17 @@ def print_results(cursor):
             print(" | ".join(str(value) for value in row))
         print("-" * 50)
 
+def save_results(cursor):
+    with open("./output.txt", mode="a", encoding="utf_8") as file:
+        if cursor.description:
+            columns = [column[0] for column in cursor.description]
+            file.write(" | ".join(columns) + "\n")
+            file.write("-" * 50 + "\n")
+            for row in cursor.fetchall():
+                file.write(" | ".join(str(value) for value in row) + "\n")
+            file.write("-" * 50 + "\n")
 
-def get_script_paths():
+def get_script_paths(paths):
     menu_extract = """
 1. Script para Borrar Modelo
 2. Script para Crear Modelo
@@ -64,13 +80,7 @@ def get_script_paths():
 4. Script para Consultas
 5. Salir
 """
-    paths = {
-        "delete_model": None,
-        "create_model": None,
-        "load_info": None,
-        "queries": None,
-    }
-
+    
     while True:
         print(menu_extract)
         try:
@@ -118,11 +128,11 @@ def main():
             elif option == 2:
                 execute_sql_script(script_paths["create_model"])
             elif option == 3:
-                script_paths = get_script_paths()
+                script_paths = get_script_paths(script_paths)
             elif option == 4:
                 execute_sql_script(script_paths["load_info"])
             elif option == 5:
-                execute_sql_script(script_paths["queries"])
+                execute_sql_script(script_paths["queries"], True)
             elif option == 6:
                 break
         except ValueError:

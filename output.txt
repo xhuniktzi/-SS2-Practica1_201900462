@@ -1,16 +1,16 @@
 TableName | RecordCount
 --------------------------------------------------
-DimPassenger | 97743
-DimCountry | 262
-DimAirport | 8828
-DimContinent | 13
-DimPilot | 94052
-FactFlight | 95453
+DimPassenger | 93336
+DimCountry | 217
+DimAirport | 8621
+DimContinent | 6
+DimPilot | 93323
+FactFlight | 94263
 --------------------------------------------------
 Gender | PassengerCount | Percentage
 --------------------------------------------------
-Male | 49166 | 50.30
-Female | 48577 | 49.70
+Male | 46986 | 50.34
+Female | 46350 | 49.66
 --------------------------------------------------
 CountryName | 01-2022 | 02-2022 | 03-2022 | 04-2022 | 05-2022 | 06-2022 | 07-2022 | 08-2022 | 09-2022 | 10-2022 | 11-2022 | 12-2022
 --------------------------------------------------
@@ -34,7 +34,7 @@ Bangladesh | 10 | 12 | 22 | 14 | 16 | 13 | 13 | 16 | 17 | 18 | 17 | 12
 Barbados | 0 | 3 | 1 | 0 | 0 | 0 | 2 | 1 | 1 | 0 | 2 | 3
 Belarus | 7 | 4 | 11 | 6 | 2 | 7 | 7 | 3 | 1 | 5 | 7 | 7
 Belgium | 3 | 4 | 10 | 8 | 4 | 8 | 9 | 11 | 3 | 4 | 5 | 3
-Belize | 17 | 27 | 29 | 17 | 19 | 24 | 24 | 18 | 18 | 24 | 18 | 27
+Belize | 17 | 26 | 28 | 17 | 19 | 23 | 23 | 18 | 18 | 23 | 15 | 25
 Benin | 2 | 8 | 2 | 4 | 9 | 6 | 1 | 3 | 4 | 3 | 6 | 3
 Bermuda | 2 | 1 | 2 | 4 | 1 | 1 | 2 | 1 | 0 | 4 | 3 | 0
 Bhutan | 4 | 2 | 3 | 2 | 8 | 4 | 4 | 2 | 0 | 8 | 1 | 8
@@ -46,7 +46,6 @@ Brunei Darussalam | 2 | 2 | 0 | 0 | 2 | 0 | 0 | 0 | 0 | 0 | 0 | 2
 Bulgaria | 12 | 10 | 10 | 2 | 13 | 11 | 13 | 7 | 7 | 7 | 8 | 10
 Burkina Faso | 22 | 25 | 22 | 13 | 28 | 22 | 22 | 19 | 21 | 29 | 28 | 23
 Burundi | 3 | 1 | 4 | 2 | 2 | 2 | 3 | 3 | 5 | 2 | 5 | 7
-C├┤te d'Ivoire | 21 | 14 | 25 | 26 | 25 | 28 | 29 | 20 | 23 | 25 | 13 | 25
 Cabo Verde | 5 | 11 | 9 | 6 | 15 | 10 | 5 | 11 | 19 | 8 | 8 | 8
 Cambodia | 8 | 9 | 11 | 13 | 13 | 13 | 8 | 12 | 11 | 2 | 14 | 10
 Cameroon | 24 | 19 | 11 | 23 | 17 | 14 | 24 | 21 | 17 | 23 | 18 | 18
@@ -58,9 +57,9 @@ Chile | 48 | 38 | 63 | 47 | 42 | 63 | 55 | 56 | 48 | 60 | 40 | 45
 China | 235 | 209 | 218 | 216 | 241 | 230 | 241 | 258 | 245 | 256 | 228 | 202
 Christmas Island | 2 | 0 | 0 | 2 | 0 | 2 | 1 | 0 | 1 | 0 | 3 | 0
 Cocos (Keeling) Islands | 0 | 0 | 0 | 0 | 2 | 0 | 0 | 0 | 2 | 1 | 2 | 1
-Colombia | 125 | 174 | 159 | 153 | 159 | 118 | 127 | 162 | 138 | 133 | 150 | 147
+Colombia | 125 | 172 | 158 | 150 | 159 | 116 | 127 | 161 | 138 | 133 | 150 | 144
 Comoros | 5 | 3 | 3 | 3 | 6 | 8 | 0 | 2 | 5 | 1 | 6 | 5
-Congo | 88 | 112 | 84 | 112 | 112 | 88 | 80 | 100 | 92 | 96 | 68 | 108
+Congo | 22 | 28 | 21 | 28 | 28 | 22 | 20 | 25 | 23 | 24 | 17 | 27
 Cook Islands | 3 | 10 | 9 | 7 | 6 | 7 | 11 | 12 | 8 | 9 | 8 | 8
 Costa Rica | 30 | 29 | 25 | 33 | 32 | 29 | 26 | 23 | 19 | 26 | 20 | 21
 Croatia | 11 | 7 | 11 | 11 | 13 | 11 | 5 | 9 | 10 | 9 | 6 | 8
@@ -156,7 +155,7 @@ Nepal | 43 | 26 | 36 | 33 | 44 | 36 | 33 | 37 | 42 | 36 | 42 | 33
 Netherlands | 11 | 13 | 13 | 12 | 19 | 7 | 10 | 22 | 15 | 16 | 11 | 13
 New Caledonia | 9 | 15 | 15 | 15 | 11 | 14 | 13 | 13 | 11 | 12 | 14 | 9
 New Zealand | 46 | 47 | 54 | 48 | 52 | 67 | 58 | 46 | 42 | 47 | 43 | 44
-Nicaragua | 19 | 19 | 19 | 15 | 16 | 11 | 13 | 5 | 15 | 15 | 12 | 8
+Nicaragua | 18 | 18 | 18 | 14 | 15 | 11 | 13 | 5 | 13 | 14 | 12 | 8
 Niger | 6 | 5 | 7 | 7 | 9 | 2 | 4 | 6 | 6 | 5 | 2 | 1
 Nigeria | 23 | 15 | 21 | 26 | 22 | 29 | 26 | 24 | 25 | 26 | 22 | 19
 Niue | 3 | 2 | 1 | 3 | 1 | 0 | 2 | 0 | 0 | 0 | 0 | 3
@@ -176,11 +175,9 @@ Poland | 16 | 23 | 17 | 19 | 18 | 14 | 10 | 21 | 17 | 19 | 18 | 19
 Portugal | 22 | 17 | 28 | 22 | 23 | 19 | 8 | 21 | 26 | 27 | 25 | 22
 Puerto Rico | 10 | 11 | 19 | 9 | 13 | 14 | 10 | 17 | 11 | 15 | 11 | 20
 Qatar | 3 | 4 | 1 | 4 | 3 | 2 | 7 | 5 | 3 | 3 | 2 | 2
-R├⌐union | 1 | 3 | 2 | 1 | 0 | 1 | 3 | 0 | 2 | 2 | 2 | 3
 Romania | 14 | 9 | 15 | 13 | 22 | 19 | 15 | 15 | 9 | 16 | 14 | 24
 Russian Federation | 208 | 164 | 177 | 185 | 183 | 182 | 206 | 184 | 191 | 181 | 193 | 193
 Rwanda | 5 | 1 | 5 | 8 | 4 | 6 | 6 | 2 | 2 | 5 | 1 | 5
-Saint Barth├⌐lemy | 0 | 1 | 1 | 0 | 1 | 0 | 1 | 0 | 2 | 0 | 3 | 2
 Saint Kitts and Nevis | 2 | 2 | 3 | 0 | 0 | 0 | 2 | 3 | 3 | 5 | 2 | 1
 Saint Lucia | 2 | 3 | 1 | 1 | 2 | 0 | 1 | 3 | 0 | 1 | 3 | 1
 Saint Martin (French part) | 1 | 1 | 0 | 3 | 1 | 4 | 1 | 3 | 4 | 1 | 4 | 1
@@ -245,13 +242,12 @@ Brazil | 3692
 China | 2779
 Indonesia | 2335
 Russian Federation | 2247
-Colombia | 1745
+Colombia | 1733
 India | 1473
 United Kingdom | 1395
 France | 1376
 Argentina | 1241
 Germany | 1146
-Congo | 1140
 Mexico | 1086
 Japan | 1013
 South Africa | 976
@@ -298,16 +294,16 @@ Egypt | 306
 Fiji | 300
 Guyana | 288
 Ecuador | 287
+Congo | 285
 Kazakhstan | 284
 Nigeria | 278
 Burkina Faso | 274
-C├┤te d'Ivoire | 274
 Sudan | 264
 Mongolia | 263
-Belize | 262
 Morocco | 260
 Portugal | 260
 Kiribati | 252
+Belize | 252
 Guatemala | 245
 Chad | 243
 Central African Republic | 241
@@ -326,7 +322,6 @@ Bangladesh | 180
 Lesotho | 177
 Botswana | 174
 Lao People's Democratic Republic | 171
-Nicaragua | 167
 Israel | 163
 Uruguay | 163
 Paraguay | 162
@@ -335,6 +330,7 @@ Liberia | 160
 Puerto Rico | 160
 Senegal | 159
 Suriname | 159
+Nicaragua | 159
 United Arab Emirates | 158
 Uganda | 154
 New Caledonia | 151
@@ -389,11 +385,11 @@ Montenegro | 45
 Djibouti | 44
 Falkland Islands (Malvinas) | 44
 Singapore | 44
-Serbia | 43
+South Sudan | 43
 Samoa | 43
+Serbia | 43
 Northern Mariana Islands | 43
 Tajikistan | 43
-South Sudan | 43
 Jordan | 43
 Ghana | 41
 Burundi | 39
@@ -407,22 +403,21 @@ Sao Tome and Principe | 29
 United States Minor Outlying Islands | 27
 Cayman Islands | 27
 Dominica | 27
-Guam | 26
 North Macedonia | 26
-Saint Pierre and Miquelon | 25
+Guam | 26
 Lebanon | 25
-Mauritius | 24
+Saint Pierre and Miquelon | 25
 Saint Martin (French part) | 24
-Saint Kitts and Nevis | 23
-Trinidad and Tobago | 23
-Togo | 23
+Mauritius | 24
 Grenada | 23
 Kuwait | 23
 Eswatini | 23
+Saint Kitts and Nevis | 23
+Trinidad and Tobago | 23
+Togo | 23
 Bermuda | 21
 Armenia | 21
 Antigua and Barbuda | 20
-R├⌐union | 20
 Saint Lucia | 18
 Wallis and Futuna | 17
 Montserrat | 17
@@ -442,10 +437,9 @@ Bahrain | 12
 Albania | 12
 Faroe Islands | 11
 Christmas Island | 11
-Saint Barth├⌐lemy | 11
 Guinea-Bissau | 10
-Norfolk Island | 10
 Martinique | 10
+Norfolk Island | 10
 Luxembourg | 9
 Gibraltar | 9
 Aruba | 9
@@ -460,11 +454,11 @@ Jersey | 4
 --------------------------------------------------
 AirportName | PassengerCount
 --------------------------------------------------
-San Pedro Airport | 172
 Santa Maria Airport | 114
 San Fernando Airport | 93
-Djambala Airport | 76
-Maya-Maya Airport | 76
+San Pedro Airport | 90
+Newcastle Airport | 72
+Santa Ana Airport | 70
 --------------------------------------------------
 CountryName | VisitCount
 --------------------------------------------------
@@ -476,38 +470,41 @@ Brazil | 3692
 --------------------------------------------------
 FlightCount | FlightStatus
 --------------------------------------------------
-31776 | Delayed
-31887 | Cancelled
-31790 | On Time
+31367 | Delayed
+
+31507 | Cancelled
+
+31389 | On Time
+
 --------------------------------------------------
 ContinentName | VisitCount
 --------------------------------------------------
-North America | 32095
+North America | 32066
 Asia | 17212
 Oceania | 13965
 Europe | 12214
-Africa | 10987
+Africa | 9838
 --------------------------------------------------
 Age | Gender | TravelCount
 --------------------------------------------------
-39 | Female | 594
-46 | Male | 587
-89 | Male | 584
-67 | Female | 576
-24 | Male | 575
+39 | Female | 590
+89 | Male | 577
+24 | Male | 572
+46 | Male | 571
+29 | Male | 568
 --------------------------------------------------
 MonthYear | FlightCount
 --------------------------------------------------
-01-2022 | 8139
-02-2022 | 7455
-03-2022 | 8159
-04-2022 | 7734
-05-2022 | 8232
-06-2022 | 7869
-07-2022 | 8129
-08-2022 | 8262
-09-2022 | 7881
-10-2022 | 8155
-11-2022 | 7744
-12-2022 | 7694
+01-2022 | 8050
+02-2022 | 7349
+03-2022 | 8065
+04-2022 | 7619
+05-2022 | 8121
+06-2022 | 7771
+07-2022 | 8035
+08-2022 | 8166
+09-2022 | 7783
+10-2022 | 8054
+11-2022 | 7672
+12-2022 | 7578
 --------------------------------------------------
